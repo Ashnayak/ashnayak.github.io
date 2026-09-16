@@ -255,11 +255,18 @@ nav .nav-links a.selected {
     margin-bottom: 16px;
 }
 
+.featured .item .details,
+.works-list .item .details {
+    min-width: 0;
+}
+
 .featured .item .details .item-info,
 .works-list .item .details .item-info {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 20px;
+    row-gap: 10px;
     margin-bottom: 20px;
 }
 
@@ -800,5 +807,18 @@ footer p {
     .content .container img {
         width: 100%;
         height: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .works-list {
+        width: 100%;
+    }
+    .works-list .item {
+        width: 100%;
+    }
+    .featured .item .details .item-info,
+    .works-list .item .details .item-info {
+        gap: 10px;
     }
 }
